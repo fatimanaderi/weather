@@ -14,5 +14,9 @@ body,
   font-family: inter;
   background: #07031a;
   color: #fff;
+  z-index: -1;
 }
 
+.weather{
+  position: absolute;
+}
