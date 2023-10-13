@@ -1,85 +1,89 @@
-@import url("https://rsms.me/inter/inter.css");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html,
 body,
-#root {
+html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  box-sizing: border-box;
+  background-color: #07031a;
+  overflow-x: hidden;
+ 
 }
-
-#root {
-  font-family: inter;
-  background: #07031a;
-  color: #fff;
-  z-index: -1;
-}
-
 .weather {
-  position: absolute;
+  z-index: 1;
+}
+.starry-sky {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  color: #fff;
+  z-index: 0;
 }
 
-@function generate-random-stars ($screen-width, $color, $density){
-  
+@function generate-random-stars($screen-width, $color, $density) {
   $h-shadow: random($screen-width);
   $v-shadow: random($screen-width);
-  
-  $stars: '#{$h-shadow}px #{$v-shadow}px #{$color}';
-	@for $i from 2 through $density {
-      $h-shadow: random($screen-width);
-      $v-shadow: random($screen-width);
-    
-    $stars: '#{$stars}, #{$h-shadow}px #{$v-shadow}px #{$color}';
-	}
-	@return unquote($stars);
+
+  $stars: "#{$h-shadow}px #{$v-shadow}px #{$color}";
+  @for $i from 2 through $density {
+    $h-shadow: random($screen-width);
+    $v-shadow: random($screen-width);
+
+    $stars: "#{$stars}, #{$h-shadow}px #{$v-shadow}px #{$color}";
+  }
+  @return unquote($stars);
 }
 
 @mixin stars-content($screen-width, $color, $density, $speed, $delay) {
   width: 2px;
   height: 2px;
-	border-radius: 50%;
-	opacity: 0;
-	box-shadow: generate-random-stars($screen-width, $color, $density);
-	animation-name: glowing-stars;
-  animation-duration: $speed+s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-timing-function: linear;
-	animation-delay: $delay+s;
+  border-radius: 50%;
+
+  opacity: 0;
+  box-shadow: generate-random-stars($screen-width, $color, $density);
+  animation-name: glowing-stars;
+  animation-duration: $speed + s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: $delay + s;
 }
 
-#stars-group-1{
-	@include stars-content(1800, #fff, 200, 1, 0);
+#stars-group-1 {
+  @include stars-content(1800, #fff, 200, 1, 0);
 }
 
-#stars-group-2{
-	@include stars-content(1800, #fff, 200, 1, 0.1);
+#stars-group-2 {
+  @include stars-content(3800, #fff, 200, 1, 0.1);
 }
 
-#stars-group-3{
-	@include stars-content(1800, #fff, 200, 1, 0.2);
+#stars-group-3 {
+  @include stars-content(3800, #fff, 200, 1, 0.2);
 }
 
-#stars-group-4{
-	@include stars-content(1800, #fff, 200, 1, 0.3);
+#stars-group-4 {
+  @include stars-content(3800, #fff, 200, 1, 0.3);
 }
 
-#stars-group-5{
-	@include stars-content(1800, #fff, 200, 1, 0.4);
+#stars-group-5 {
+  @include stars-content(3800, #fff, 200, 1, 0.4);
 }
 
-#stars-group-6{
-	@include stars-content(1800, #fff, 200, 1, 0.5);
+#stars-group-6 {
+  @include stars-content(3800, #fff, 200, 1, 0.5);
 }
-
 
 @keyframes glowing-stars {
-    0%   {opacity: 0;}
-    50%  {opacity: 1;}
-    100% {opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
