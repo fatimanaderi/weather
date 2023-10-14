@@ -6,7 +6,7 @@ const Weather = () => {
   const { data, checkTime, err, getDay } = useWeather();
   if (err) return <></>;
   return (
-    <div className="mt-6 mx-6">
+    <div className="my-5 mx-5">
       <SearchInput
         city={data?.city.name}
         country={data?.city.country}

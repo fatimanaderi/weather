@@ -10,7 +10,7 @@ const useWeather = () => {
           lat: 34.0901,
           lon: -118.4065,
           country: "US",
-          cnt: 7,
+          cnt: 8,
         },
       })
       .then((res) => setData({ list: res.data?.list, city: res.data.city }))
