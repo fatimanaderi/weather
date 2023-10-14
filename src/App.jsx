@@ -7,7 +7,9 @@ const App=()=>{
     <>
     <CometStar/>
     <Weather/>
-    {/* <Earth/> */}
+    {/* <div className="earth">
+    <Earth/>
+    </div> */}
     </>
   )
 }

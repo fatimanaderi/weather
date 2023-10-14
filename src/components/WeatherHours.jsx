@@ -2,11 +2,11 @@ import { dayIcon, nightIcon } from "../data/icon";
 
 const WeatherHours = ({ data, checkTime }) => {
   return (
-    <div className="flex-center flex-wrap my-6 w-full sm:w-1/4 ">
+    <div className="flex-center flex-wrap my-3 w-full sm:w-1/4">
       {data?.list.map((item, index) => (
         <div key={index} className="w-32 ml-3 mt-3 glassmorphism">
-          <div className="text-xs"> {item.weather[0].description}</div>
-          <div className="text-xs">{item.dt_txt.slice(11, 16)}</div>
+          <div className="text-xs text-gray-400"> {item.weather[0].description}</div>
+          <div className="text-base">{item.dt_txt.slice(11, 16)}</div>
           <div className="flex-center">
             <img
               src={`${
