@@ -1,7 +1,8 @@
 import useData from "./useData";
-
+import days from "../data/daysWeak";
+import months from "../data/months";
 const useWeather = () => {
-  const { data, err } = useData("forecast", {
+  const { data, err,loading } = useData("forecast", {
     lat: 34.0901,
     lon: -118.4065,
     country: "US",
@@ -13,34 +14,11 @@ const useWeather = () => {
     );
   };
   const getDay = () => {
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-    let months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
     let now = new Date(data?.list[0].dt_txt);
     return data
       ? days[now.getDay()] + " " + now.getDate() + " " + months[now.getMonth()]
       : "";
   };
-  return { data, checkTime, err, getDay };
+  return { data,loading,err ,checkTime, getDay };
 };
 export default useWeather;
