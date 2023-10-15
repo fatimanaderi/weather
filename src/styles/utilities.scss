@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glassmorphism {
+  @apply backdrop-filter backdrop-blur-xl bg-white bg-opacity-10 rounded-2xl p-3;
+}
+.flex-center {
+  @apply flex items-center justify-center;
+}
+.progress {
+  @apply glassmorphism rounded-full;
+}
+.circle {
+  @apply relative w-32 h-32 rounded-full overflow-hidden;
+}
+.circle .inner {
+  @apply flex-center absolute w-[7.4rem] h-[7.4rem] rounded-full top-2/4 left-2/4 text-xl font-medium ;
+}
+.weather,
+.earth{
+    @apply w-full h-full fixed overflow-y-scroll;
+}
+.starry-sky{
+    @apply w-full h-full fixed overflow-hidden top-0;
+}

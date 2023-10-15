@@ -7,11 +7,11 @@ const useAirPollution = () => {
     country: "US",
   });
   const airState = {
-    "1": { name: "Good" ,color : "border-lime-300" },
-    "2": { name: "Fair",color : "border-lime-200" },
-    "3": { name: "Moderate",color : "border-yellow-200" },
-    "4": { name: "Poor",color : "border-orange-300" },
-    "5": { name: "Very Poor",color : "border-red-300" },
+    "5": "Good",
+    "4": "Fair",
+    "3": "Moderate",
+    "2":"Poor",
+    "1":"Very Poor",
   };
   return { data, err, loading, airState };
 };

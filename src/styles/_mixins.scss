@@ -1,0 +1,17 @@
+@mixin stars-content($screen-width, $color, $density, $speed, $delay) {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: generate-random-stars($screen-width, $color, $density);
+  animation-name: glowing-stars;
+  animation-duration: $speed + s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: $delay + s;
+}
+@mixin progress-size($color ,$percentage ,$circle){
+  background-image: conic-gradient($color $percentage , $circle 0);
+  color: $color;
+}
