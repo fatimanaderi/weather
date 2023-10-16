@@ -7,7 +7,7 @@ const App=()=>{
     <>
     <CometStar/>
     <Weather/>
-    {/* <div className="earth">
+    {/* <div className="frame z-[1]">
     <Earth/>
     </div> */}
     </>

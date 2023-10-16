@@ -6,7 +6,7 @@ const Weather = () => {
   const { data, checkTime, err, getDay } = useWeather();
   if (err) return <></>;
   return (
-    <div className="mr-5 mb-5 weather">
+    <div className="mr-5 mb-5 frame z-[2]">
       <Navbar
         city={data?.city.name}
         country={data?.city.country}

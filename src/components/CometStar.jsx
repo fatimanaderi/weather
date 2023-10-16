@@ -1,7 +1,7 @@
 
 const CometStar = () => {
   return (
-    <div className="starry-sky">
+    <div className="z-0 w-full h-full fixed overflow-hidden top-0">
       {Array(6)
         .fill("")
         .map((item, index) => (
