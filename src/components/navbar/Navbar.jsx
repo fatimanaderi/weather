@@ -4,7 +4,7 @@ const Navbar = ({ city, country, date }) => {
   return (
     <>
       <div className="flex-center flex-wrap sm:flex-nowarp px-5">
-        <CurrentLoc city={city} country={country} data={date}/>
+        <CurrentLoc city={city} country={country} date={date}/>
         <SearchInput/>
       </div>
     </>
