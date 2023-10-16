@@ -8,6 +8,7 @@ const WeatherHours = ({ data, checkTime }) => {
           <div className="text-xs text-gray-400"> {item.weather[0].description}</div>
           <div className="text-base">{item.dt_txt.slice(11, 16)}</div>
           <div className="flex-center">
+            <div className="text-2xl">{Math.round(item.main.temp_max - 273.15)}°</div>
             <img
               src={`${
                 checkTime(item.dt_txt)
@@ -15,7 +16,6 @@ const WeatherHours = ({ data, checkTime }) => {
                   : nightIcon[item.weather[0].id]
               }`}
             />
-            <div>{Math.round(item.main.temp_max - 273.15)}°</div>
           </div>
         </div>
       ))}
