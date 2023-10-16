@@ -1,13 +1,13 @@
 import useWeather from "../hooks/useWeather";
-import SearchInput from "./SearchInput";
 import WeatherHours from "./WeatherHours";
-import AirPollution from "./AirPollution";
+import AirPollution from "./air-pollution/AirPollution";
+import Navbar from "./navbar/Navbar";
 const Weather = () => {
   const { data, checkTime, err, getDay } = useWeather();
   if (err) return <></>;
   return (
     <div className="mr-5 mb-5 weather">
-      <SearchInput
+      <Navbar
         city={data?.city.name}
         country={data?.city.country}
         date={getDay()}
