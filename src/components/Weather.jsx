@@ -12,7 +12,7 @@ const Weather = () => {
         country={data?.city.country}
         date={getDay()}
       />
-      <div className="flex flex-row justify-between justify-items-start">
+      <div className="flex flex-row flex-wrap justify-center sm:justify-between justify-items-start">
         <WeatherHours data={data} checkTime={checkTime} />
         <AirPollution />
       </div>
