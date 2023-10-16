@@ -1,7 +1,7 @@
 import useData from "./useData";
 import days from "../data/daysWeak";
 import months from "../data/months";
-const useWeather = () => {
+const useHourlyWeather = () => {
   const { data, err,loading } = useData("forecast", {
     lat: 34.0901,
     lon: -118.4065,
@@ -21,4 +21,4 @@ const useWeather = () => {
   };
   return { data,loading,err ,checkTime, getDay };
 };
-export default useWeather;
+export default useHourlyWeather;
