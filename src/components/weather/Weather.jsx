@@ -3,6 +3,7 @@ import HourlyWeather from "./HourlyWeather";
 import AirPollution from "../air-pollution/AirPollution";
 import Navbar from "../navbar/Navbar";
 import DailyWeather from "./DailyWeather";
+import CurrentWeather from "./CurrentWeather";
 const Weather = () => {
   const { data, checkTime, err, getDay } = useHourlyWeather();
   if (err) return <></>;
@@ -13,10 +14,11 @@ const Weather = () => {
         country={data?.city.country}
         date={getDay()}
       />
-      <div className="flex flex-row flex-wrap justify-center justify-items-start">
+      <div className="flex flex-wrap lg:flex-col">
         <HourlyWeather data={data} checkTime={checkTime} />
-        <DailyWeather/>
         <AirPollution />
+        <CurrentWeather />
+        <DailyWeather />
       </div>
     </div>
   );

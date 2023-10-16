@@ -10,7 +10,7 @@ const DailyWeather = () => {
   };
   if (err) return <></>;
   return (
-    <div className="flex-center flex-wrap h-32 my-3 w-full lg:w-2/4">
+    <div className="flex-center flex-wrap mb-6 w-full md:w-2/4 lg:w-1/3 ">
       {data?.daily.map((item, index) => (
         <div
           key={index}
