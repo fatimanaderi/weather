@@ -1,6 +1,6 @@
-import { dayIcon, nightIcon } from "../data/icon";
+import { dayIcon, nightIcon } from "../../data/icon";
 
-const WeatherHours = ({ data, checkTime }) => {
+const HourlyWeather = ({ data, checkTime }) => {
   return (
     <div className="flex-center flex-wrap my-3 w-full sm:w-1/4">
       {data?.list.map((item, index) => (
@@ -22,4 +22,4 @@ const WeatherHours = ({ data, checkTime }) => {
     </div>
   );
 };
-export default WeatherHours;
+export default HourlyWeather;

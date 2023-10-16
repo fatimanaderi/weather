@@ -1,7 +1,7 @@
-import useWeather from "../hooks/useWeather";
-import WeatherHours from "./WeatherHours";
-import AirPollution from "./air-pollution/AirPollution";
-import Navbar from "./navbar/Navbar";
+import useWeather from "../../hooks/useWeather";
+import HourlyWeather from "./HourlyWeather";
+import AirPollution from "../air-pollution/AirPollution";
+import Navbar from "../navbar/Navbar";
 const Weather = () => {
   const { data, checkTime, err, getDay } = useWeather();
   if (err) return <></>;
@@ -13,7 +13,7 @@ const Weather = () => {
         date={getDay()}
       />
       <div className="flex flex-row flex-wrap justify-center sm:justify-between justify-items-start">
-        <WeatherHours data={data} checkTime={checkTime} />
+        <HourlyWeather data={data} checkTime={checkTime} />
         <AirPollution />
       </div>
     </div>

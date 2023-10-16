@@ -1,6 +1,6 @@
 import CometStar from "./components/CometStar";
 // import Earth from "./components/Earth";
-import Weather from "./components/Weather";
+import Weather from "./components/weather/Weather";
 
 const App=()=>{
   return(
