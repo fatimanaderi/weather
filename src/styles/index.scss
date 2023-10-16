@@ -11,15 +11,6 @@ html {
   overflow-x: hidden;
   color: white;
 }
-.weather {
-  z-index: 2;
-}
-.earth {
-  z-index: 1;
-}
-.starry-sky {
-  z-index: 0;
-}
 
 #stars-group-1 {
   @include stars-content(1800, white, 200, 1, 0);
@@ -56,27 +47,19 @@ html {
     opacity: 0;
   }
 }
-
-.circle {
-  background: $circle-color;
-}
 .circle.per-1 {
-  @include progress-size($red-500 ,100% ,$circle-color);
+  @include progress-size($red-500, 100%, $circle-color);
 }
 .circle.per-2 {
-  @include progress-size($orange-500, 25% ,$circle-color);
+  @include progress-size($orange-500, 25%, $circle-color);
 }
 .circle.per-3 {
-  @include progress-size($yellow-400 ,50% ,$circle-color);
+  @include progress-size($yellow-400, 50%, $circle-color);
 }
 .circle.per-4 {
-  @include progress-size($lime-400 , 75% ,$circle-color);
+  @include progress-size($lime-400, 75%, $circle-color);
 }
 .circle.per-5 {
-  @include progress-size($lime-500, 100% ,$circle-color);
+  @include progress-size($lime-500, 100%, $circle-color);
 }
 
-.circle .inner {
-  transform: translate(-50%, -50%);
-  background: $bg-color;
-}
