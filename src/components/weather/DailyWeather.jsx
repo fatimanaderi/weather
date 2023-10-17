@@ -1,5 +1,5 @@
 import useDailyWeather from "../../hooks/useDailyWeather";
-import { dayIcon, nightIcon } from "../../data/icon";
+import { dayIcon } from "../../data/icon";
 import getDate from "../../services/date";
 
 const DailyWeather = () => {

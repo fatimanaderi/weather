@@ -1,7 +1,7 @@
 const CurrentLoc = ({ city, country, date }) => {
   return (
-    <div className="w-full sm:w-1/4 my-5 ">
-      <h1 className="text-2xl font-bold">
+    <div className="w-full sm:w-1/4 my-5 text-center">
+      <h1 className="text-2xl font-bold mr-2">
         {city}, {country}
       </h1>
       <h2>{date}</h2>
