@@ -23,21 +23,6 @@ const Model = (props) => {
         <Marker rotation={[0, Math.PI / 2, 0]} position={[0, 1.3, 0]}>
           <FaMapMarkerAlt style={{ color: "orange" }} />
         </Marker>
-        <group position={[0, 0, 1.3]} rotation={[0, 0, Math.PI]}>
-          <Marker rotation={[0, Math.PI / 2, Math.PI / 2]}>
-            <div
-              style={{
-                position: "absolute",
-                fontSize: 10,
-                letterSpacing: -0.5,
-                left: 17.5,
-              }}
-            >
-              north
-            </div>
-            <FaMapMarkerAlt style={{ color: "indianred" }} />
-          </Marker>
-        </group>
       </mesh>
     </group>
   );

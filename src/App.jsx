@@ -1,5 +1,5 @@
 import CometStar from "./components/CometStar";
-// import Earth from "./components/earth/Earth";
+import Earth from "./components/earth/Earth";
 import Weather from "./components/weather/Weather";
 
 const App = () => {
@@ -7,9 +7,9 @@ const App = () => {
     <>
       <CometStar />
       <Weather />
-      {/* <div className="frame z-[1]">
+      <div className="frame z-[1]">
         <Earth />
-      </div> */}
+      </div>
     </>
   );
 };
