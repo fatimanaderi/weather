@@ -9,6 +9,7 @@ const DailyWeather = () => {
     return day;
   };
   if (err) return <></>;
+  if (loading) return <></>;
   return (
     <div className="flex-center flex-wrap mb-6 w-full md:w-2/4 lg:w-1/3 ">
       {data?.daily.map((item, index) => (
