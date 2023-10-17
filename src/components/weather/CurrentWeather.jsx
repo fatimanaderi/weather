@@ -17,7 +17,7 @@ const CurrentWeather = () => {
           </span>
         </div>
         <div className="flex items-center mt-2">
-          <img src={dayIcon[data?.weather[0].id]} />
+          <img src={dayIcon[data?.weather[0].id]} className="w-16 h-16" />
           <div className="text-3xl font-bold">
             {Math.round(data?.main.feels_like - 273.15)}°{" "}
           </div>
@@ -25,7 +25,7 @@ const CurrentWeather = () => {
             {data?.name}
           </div>
         </div>
-        <div className="flex items-center text-2xl mt-4">
+        <div className="flex items-center text-2xl py-4">
           <div className="mx-3">
             <FaCloud />
             <div className="text-base">{data?.clouds.all == 0 ? "clear" : data?.clouds.all}</div>

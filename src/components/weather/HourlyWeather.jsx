@@ -29,6 +29,7 @@ const HourlyWeather = ({ searchInput, getCity }) => {
               {Math.round(item.main.temp_max - 273.15)}°
             </div>
             <img
+            className="w-16 h-16"
               src={`${
                 checkTime(item.dt_txt)
                   ? dayIcon[item.weather[0].id]

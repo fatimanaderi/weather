@@ -20,7 +20,7 @@ const DailyWeather = () => {
           <div className="text-[11px] font-bold text-gray-400 pt-2">
             {dayDate(item.dt)}
           </div>
-          <img src={dayIcon[item.weather[0].id]} />
+          <img src={dayIcon[item.weather[0].id]} className="w-16 h-16" />
           <div className="text-xl">{Math.round(item.temp.max - 273.15)}°</div>
         </div>
       ))}
