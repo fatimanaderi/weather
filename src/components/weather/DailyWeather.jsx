@@ -11,7 +11,7 @@ const DailyWeather = ({geo}) => {
   if (err) return <></>;
   if (loading) return <></>;
   return (
-    <div className="flex-center flex-wrap mb-6 w-full md:w-2/4 lg:w-1/3 ">
+    <div className="flex-center flex-wrap mb-6 w-full md:w-2/4 lg:w-1/3 lg:justify-start lg:ml-5">
       {data?.daily.map((item, index) => (
         <div
           key={index}

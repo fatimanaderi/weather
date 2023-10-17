@@ -28,7 +28,7 @@ const Progress = ({ airState, stateNumber }) => {
     return emoji;
   };
   return (
-    <div className="m-3 flex-center">
+    <div className="m-3 flex-center lg:justify-start lg:ml-10">
       <div className={"circle" + " " + "per-" + stateNumber}>
         <div className="inner">
           <div className="text-center">

@@ -9,7 +9,7 @@ const BarChart = ({ data }) => {
     return per;
   };
   return (
-    <div className="flex-center mt-6 mx-3">
+    <div className="flex-center mt-6 mx-3 lg:justify-start lg:ml-10">
       <table className="text-[10px] leading-4 text-center h-[200px]" cellPadding="1" cellSpacing="0">
         <tbody>
           <tr>
