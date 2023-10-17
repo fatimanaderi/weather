@@ -23,6 +23,7 @@ const Earth = () => {
         minPolarAngle={Math.PI * 0.35}
         maxPolarAngle={Math.PI * 0.55}
         enableZoom={false}
+        enableRotate={false}
         enablePan={false}
         maxDistance={6}
       />
