@@ -1,13 +1,8 @@
 import useData from "./useData";
 import days from "../data/daysWeak";
 import months from "../data/months";
-const useHourlyWeather = () => {
-  const { data, err,loading } = useData("forecast", {
-    lat: 34.0901,
-    lon: -118.4065,
-    country: "US",
-    cnt: 8,
-  });
+const useHourlyWeather = (searchInput) => {
+  const { data, err,loading } = useData({endpoint :"forecast", params :{cnt: 8},searchInput});
   const checkTime = (itemDate) => {
     return (
       Number(itemDate.slice(11, 13)) > 2 && Number(itemDate.slice(11, 13)) < 18
