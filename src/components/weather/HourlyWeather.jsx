@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import { dayIcon, nightIcon } from "../../data/icon";
 import useHourlyWeather from "../../hooks/useHourlyWeather";
 
-const HourlyWeather = ({ searchInput, getCity }) => {
+const HourlyWeather = ({ geo, getCity }) => {
   const { data, checkTime, loading, err, getDay } =
-    useHourlyWeather(searchInput);
+    useHourlyWeather(geo);
   useEffect(() => {
-    if (err) return <></>;
     if (loading) return <></>;
-    if (data) {
+    else if (err) return <></>;
+    else if (data) {
       getCity({
         city: data?.city.name,
         country: data?.city.country,

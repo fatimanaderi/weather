@@ -1,7 +1,7 @@
 import useData from "./useData";
 
-const useAirPollution = () => {
-  const { data, err, loading } = useData({endpoint:"air_pollution"});
+const useAirPollution = (geo) => {
+  const { data, err, loading } = useData({endpoint:"air_pollution",geo});
   const airState = {
     "5": "Good",
     "4": "Fair",

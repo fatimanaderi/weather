@@ -1,8 +1,8 @@
 import useAirPollution from "../../hooks/useAirPollution";
 import BarChart from "./BarChart";
 import Progress from "./Progress"
-const AirPollution = () => {
-  const { data, err, loading, airState } = useAirPollution();
+const AirPollution = ({geo}) => {
+  const { data, err, loading, airState  } = useAirPollution(geo);
   if (loading || err) return <>...</>;
   return (
     <div className="my-6 w-full md:w-2/4 lg:w-1/3">

@@ -3,8 +3,8 @@ import { dayIcon } from "../../data/icon";
 import { MdDewPoint } from "react-icons/md";
 import { FaCloud, FaWind } from "react-icons/fa";
 import { ImDroplet } from "react-icons/im";
-const CurrentWeather = () => {
-  const { data, err, loading } = useCurrentWeather();
+const CurrentWeather = ({geo}) => {
+  const { data, err, loading } = useCurrentWeather(geo);
   if (err) return <></>;
   if (loading) return <></>;
   return (

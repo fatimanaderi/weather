@@ -2,8 +2,8 @@ import useDailyWeather from "../../hooks/useDailyWeather";
 import { dayIcon } from "../../data/icon";
 import getDate from "../../services/date";
 
-const DailyWeather = () => {
-  const { data, loading, err } = useDailyWeather();
+const DailyWeather = ({geo}) => {
+  const { data, loading, err } = useDailyWeather(geo);
   const dayDate = (dt) => {
     const { day } = getDate(dt);
     return day;

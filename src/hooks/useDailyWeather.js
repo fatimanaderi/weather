@@ -1,6 +1,6 @@
 import useData from "./useData";
-const useDailyWeather = () => {
-  const { data, err, loading } = useData({endpoint :"onecall"});
+const useDailyWeather = (geo) => {
+  const { data, err, loading } = useData({endpoint :"onecall",geo});
   return { data, err, loading };
 };
 export default useDailyWeather;
