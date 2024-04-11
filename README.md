@@ -8,7 +8,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-![alt text](https://i.postimg.cc/QH77MdPH/weather.png)
 <p align="center">
-  <img src="https://i.postimg.cc/QH77MdPH/weather.png" width="100%" alt="accessibility text">
+  <img src="https://imgurl.ir/viewer.php?file=x628200_wher.png" width="100%" alt="accessibility text">
 </p>
