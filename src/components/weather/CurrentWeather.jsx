@@ -3,12 +3,12 @@ import { dayIcon } from "../../data/icon";
 import { MdDewPoint } from "react-icons/md";
 import { FaCloud, FaWind } from "react-icons/fa";
 import { ImDroplet } from "react-icons/im";
-const CurrentWeather = ({geo}) => {
+const CurrentWeather = ({ geo }) => {
   const { data, err, loading } = useCurrentWeather(geo);
   if (err) return <></>;
   if (loading) return <></>;
   return (
-    <div className="my-6 w-full md:w-2/4 lg:w-1/3 px-3 flex-center lg:justify-start lg:ml-1">
+    <div className="my-6 w-full md:w-2/4 px-3 flex-center ">
       <div className="glassmorphism w-fit rounded-2xl w-11/12 h-52 mx-5 p-5">
         <div className="text-2xl font-bold mx-3">
           Today
@@ -28,11 +28,13 @@ const CurrentWeather = ({geo}) => {
         <div className="flex items-center text-2xl py-4">
           <div className="mx-3">
             <FaCloud />
-            <div className="text-base">{data?.clouds.all == 0 ? "clear" : data?.clouds.all}</div>
+            <div className="text-base">
+              {data?.clouds.all == 0 ? "clear" : data?.clouds.all}
+            </div>
           </div>
           <div className="mx-3">
             <MdDewPoint />
-            <div className="text-base">{data?.main.pressure}</div> 
+            <div className="text-base">{data?.main.pressure}</div>
           </div>
           <div className="mx-3">
             <FaWind />

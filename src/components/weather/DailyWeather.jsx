@@ -2,7 +2,7 @@ import useDailyWeather from "../../hooks/useDailyWeather";
 import { dayIcon } from "../../data/icon";
 import getDate from "../../services/date";
 
-const DailyWeather = ({geo}) => {
+const DailyWeather = ({ geo }) => {
   const { data, loading, err } = useDailyWeather(geo);
   const dayDate = (dt) => {
     const { day } = getDate(dt);
@@ -11,7 +11,7 @@ const DailyWeather = ({geo}) => {
   if (err) return <></>;
   if (loading) return <></>;
   return (
-    <div className="flex-center flex-wrap mb-6 w-full md:w-2/4 lg:w-1/3 lg:justify-start lg:ml-5">
+    <div className="flex-center flex-wrap mb-6 w-full md:w-2/4">
       {data?.daily.map((item, index) => (
         <div
           key={index}

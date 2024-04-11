@@ -3,8 +3,7 @@ import { dayIcon, nightIcon } from "../../data/icon";
 import useHourlyWeather from "../../hooks/useHourlyWeather";
 
 const HourlyWeather = ({ geo, getCity }) => {
-  const { data, checkTime, loading, err, getDay } =
-    useHourlyWeather(geo);
+  const { data, checkTime, loading, err, getDay } = useHourlyWeather(geo);
   useEffect(() => {
     if (loading) return <></>;
     else if (err) return <></>;
@@ -17,7 +16,7 @@ const HourlyWeather = ({ geo, getCity }) => {
     }
   }, [data]);
   return (
-    <div className="flex-center flex-wrap my-3 w-full md:w-2/4 lg:w-full">
+    <div className="flex-center flex-wrap w-full md:w-2/4 ">
       {data?.list.map((item, index) => (
         <div key={index} className="w-32 m-1 glassmorphism p-3 rounded-2xl">
           <div className="text-xs font-bold text-gray-400">
@@ -29,7 +28,7 @@ const HourlyWeather = ({ geo, getCity }) => {
               {Math.round(item.main.temp_max - 273.15)}°
             </div>
             <img
-            className="w-16 h-16"
+              className="w-16 h-16"
               src={`${
                 checkTime(item.dt_txt)
                   ? dayIcon[item.weather[0].id]
