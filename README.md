@@ -9,3 +9,6 @@ Currently, two official plugins are available:
 
 
 ![alt text](https://i.postimg.cc/QH77MdPH/weather.png)
+<p align="center">
+  <img src="https://i.postimg.cc/QH77MdPH/weather.png" width="100%" alt="accessibility text">
+</p>
