@@ -9,5 +9,5 @@ Currently, two official plugins are available:
 
 
 <p align="center">
-  <img src="https://imgurl.ir/viewer.php?file=x628200_wher.png" width="100%" alt="accessibility text">
+  <img src="https://imgurl.ir/uploads/x628200_wher_thumb.png" width="100%" alt="accessibility text">
 </p>
