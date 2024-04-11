@@ -1,6 +1,6 @@
 # React + Vite + React-Three
 
-A waether application with search engine to find searched city weather
+A weather application with search engine to find searched city weather
 
 Currently, two official plugins are available:
 
