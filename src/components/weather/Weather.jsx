@@ -19,7 +19,7 @@ const Weather = () => {
         date={city.date}
         onSearch={(input) => setSearchInput(input)}
       />
-      <div className="flex flex-wrap max-w-7xl mx-auto">
+      <div className="flex flex-wrap max-w-7xl mx-auto mt-4 ">
         <HourlyWeather geo={geo} getCity={(city) => setCity(city)} />
         <AirPollution geo={geo} />
         <CurrentWeather geo={geo} />
